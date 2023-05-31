@@ -1,0 +1,20 @@
+# The manifest for the "stg" environment.
+# Read the full specification for the "Environment" type at:
+#  https://aws.github.io/copilot-cli/docs/manifest/environment/
+
+name: stg
+type: Environment
+
+network:
+  vpc:
+    id: vpc-02bcb00aad89a75f1
+    # placement: private
+    subnets:
+      # public:
+      #   - id: subnet-0784cedef6a8e2394
+      #   - id: subnet-008453e948e51ea81
+      private:
+        - id: subnet-0eb46ee3f0d33b9d3
+        - id: subnet-0ab103c1a01255f38
+observability:
+  container_insights: true
